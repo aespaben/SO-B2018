@@ -1,0 +1,69 @@
+.TH "defines.h" 3 "Sábado, 6 de Julio de 2019" "Proyecto de Sistemas Operativos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+defines.h \- Definición de constantes, manejo de errores y estructuras para colas de mensajes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Clases"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmsgbuf\fP"
+.br
+.RI "\fIContiene información del número de autos que pasan por una vía\&. \fP"
+.ti -1c
+.RI "struct \fBmsgsig\fP"
+.br
+.RI "\fIIndica la vía que tiene permiso para continuar\&. \fP"
+.in -1c
+.SS "'defines'"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSHARED_FILE\fP   '/bin/ls'"
+.br
+.ti -1c
+.RI "#define \fBSHARED_NUM_1\fP   33"
+.br
+.ti -1c
+.RI "#define \fBSHARED_NUM_2\fP   34"
+.br
+.ti -1c
+.RI "#define \fBSHARED_NUM_3\fP   35"
+.br
+.ti -1c
+.RI "#define \fBSHARED_NUM_4\fP   36"
+.br
+.ti -1c
+.RI "#define \fBhandle_error\fP(msg)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Definición de constantes, manejo de errores y estructuras para colas de mensajes\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de los 'defines'"
+.PP 
+.SS "#define handle_error(msg)"
+\fBValor:\fP
+.PP
+.nf
+perror(msg); \
+        exit(EXIT_FAILURE);
+.fi
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos del código fuente\&.

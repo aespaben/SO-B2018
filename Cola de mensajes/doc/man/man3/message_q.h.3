@@ -1,0 +1,96 @@
+.TH "message_q.h" 3 "Sábado, 6 de Julio de 2019" "Proyecto de Sistemas Operativos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+message_q.h \- Funciones para el manejo de cola de mensajes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sys/msg\&.h>\fP
+.br
+\fC#include 'defines\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "key_t \fBget_key\fP (char *f, int n)"
+.br
+.RI "\fIUsa la función 'ftok()' para obtener una llave válida\&. \fP"
+.ti -1c
+.RI "int \fBcreate_message_q\fP (key_t key, int flg)"
+.br
+.RI "\fICrea una cola de mensaje (si no existe)\&. \fP"
+.ti -1c
+.RI "void \fBdestroy_message_q\fP (int msgid)"
+.br
+.RI "\fIElimina la cola de mensajes\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Funciones para el manejo de cola de mensajes\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "int create_message_q (key_t key, int flg)"
+
+.PP
+Crea una cola de mensaje (si no existe)\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIkey\fP Llave obtenida con '\fBget_key()\fP'\&. 
+.br
+\fIflg\fP Bandera\&. 0 para obtener solo el id de la cola de mensajes, cualquier otro valor entero para crear la cola de mensajes\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+msgid id de la cola de mensajes\&. 
+.RE
+.PP
+
+.SS "void destroy_message_q (int msgid)"
+
+.PP
+Elimina la cola de mensajes\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImsgid\fP id de la cola de mensajes\&. 
+.RE
+.PP
+
+.SS "key_t get_key (char * f, int n)"
+
+.PP
+Usa la función 'ftok()' para obtener una llave válida\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIf\fP Cadena de caracteres con la ruta del archivo\&. 
+.br
+\fIn\fP Número entero para generar la llave\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+La llave creada\&. 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos del código fuente\&.

@@ -1,0 +1,101 @@
+.TH "rand_poisson.h" 3 "Sábado, 6 de Julio de 2019" "Proyecto de Sistemas Operativos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rand_poisson.h \- Funciones especializadas para el cálculo de la probabilidad acumulada, intervalos de probabilidad y generación de números aleatorios de la distribución Poisson\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <math\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "int \fBacc_poisson\fP (double lambda, double **acc)"
+.br
+.RI "\fICalcula la función de densidad acumulada para lambda\&. \fP"
+.ti -1c
+.RI "int \fBranges_poisson\fP (double lambda, double ***ranges)"
+.br
+.RI "\fICalcula los intervalos de probabilidad acumulada de la distribución Poisson\&. \fP"
+.ti -1c
+.RI "int \fBget_random_poisson\fP (double **ranges)"
+.br
+.RI "\fIGenera un número aleatorio según la distribución Poisson\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Funciones especializadas para el cálculo de la probabilidad acumulada, intervalos de probabilidad y generación de números aleatorios de la distribución Poisson\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "int acc_poisson (double lambda, double ** acc)"
+
+.PP
+Calcula la función de densidad acumulada para lambda\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIlambda\fP Valor de la media de Poisson\&. 
+.br
+\fIacc\fP Puntero a arreglo declarado usando memoria dinámica\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Tamaño óptimo del arreglo\&. 
+.RE
+.PP
+
+.SS "int get_random_poisson (double ** ranges)"
+
+.PP
+Genera un número aleatorio según la distribución Poisson\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIranges\fP Matriz (llena) que contiene los intervalos de probabilidad de Poisson\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Valor aleatorio según la distribución de Poisson\&. 
+.RE
+.PP
+
+.SS "int ranges_poisson (double lambda, double *** ranges)"
+
+.PP
+Calcula los intervalos de probabilidad acumulada de la distribución Poisson\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIValor\fP de la media de Poisson\&. 
+.br
+\fIacc\fP Puntero a matriz declarada usando memoria dinámica\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Tamaño óptimo del arreglo\&. 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos del código fuente\&.

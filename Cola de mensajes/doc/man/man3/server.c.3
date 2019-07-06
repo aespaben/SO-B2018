@@ -1,0 +1,117 @@
+.TH "server.c" 3 "Sábado, 6 de Julio de 2019" "Proyecto de Sistemas Operativos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+server.c \- Programa servidor\&. Se encarga de sincronizar y aceptar las peticiones de acceso de los procesos al área compartida\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <signal\&.h>\fP
+.br
+\fC#include <pthread\&.h>\fP
+.br
+\fC#include 'message_q\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBusage\fP (char *arg)"
+.br
+.RI "\fIImprime por consola la manera de usar el programa\&. \fP"
+.ti -1c
+.RI "void \fBexit_signal\fP (int signum)"
+.br
+.RI "\fISeñal que se activa al interrumpir la ejecución del programa con ctrl+c\&. \fP"
+.ti -1c
+.RI "void * \fBshow_cars\fP (void *arg)"
+.br
+.RI "\fIMuestra la cantidad de autos en cada vía y la cantidad de autos totales\&. \fP"
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.RI "\fIFunción principal\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Programa servidor\&. Se encarga de sincronizar y aceptar las peticiones de acceso de los procesos al área compartida\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel España\&. 
+.PP
+Adriana Daboin\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "void exit_signal (int signum)"
+
+.PP
+Señal que se activa al interrumpir la ejecución del programa con ctrl+c\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIsignum\fP Número de la señal\&. 
+.RE
+.PP
+
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Función principal\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIargc\fP Cantidad de argumentos (no se especifica)\&. 
+.br
+\fIargv\fP Vector de argumentos\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+0 al salir exitosamente, -1 en caso de error\&. 
+.RE
+.PP
+
+.SS "void* show_cars (void * arg)"
+
+.PP
+Muestra la cantidad de autos en cada vía y la cantidad de autos totales\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIarg\fP Arreglo con la cantidad de autos por vía\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+NULL\&. 
+.RE
+.PP
+
+.SS "void usage (char * arg)"
+
+.PP
+Imprime por consola la manera de usar el programa\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIarg\fP Cadena de caracteres con el nombre del programa 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos del código fuente\&.
