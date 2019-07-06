@@ -1,0 +1,8 @@
+<map id="defines.h" name="defines.h">
+<area shape="rect" id="node2" href="$message__q_8h.html" title="Funciones para el manejo de cola de mensajes. " alt="" coords="180,80,280,107"/>
+<area shape="rect" id="node3" href="$client1_8c.html" title="Envía peticiones (autos) de forma aleatoria al servidor. " alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node4" href="$client2_8c.html" title="Envía peticiones (autos) de forma aleatoria al servidor. " alt="" coords="100,155,171,181"/>
+<area shape="rect" id="node5" href="$client3_8c.html" title="Envía peticiones (autos) de forma aleatoria al servidor. " alt="" coords="195,155,265,181"/>
+<area shape="rect" id="node6" href="$client4_8c.html" title="Envía peticiones (autos) de forma aleatoria al servidor. " alt="" coords="289,155,360,181"/>
+<area shape="rect" id="node7" href="$server_8c.html" title="Programa servidor. Se encarga de sincronizar y aceptar las peticiones de acceso de los procesos al ár..." alt="" coords="385,155,454,181"/>
+</map>

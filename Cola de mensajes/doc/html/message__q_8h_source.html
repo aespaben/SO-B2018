@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Proyecto de Sistemas Operativos: Fichero Fuente message_q.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Sistemas Operativos
+   </div>
+   <div id="projectbrief">Simulación de cruce de calles con vehículos, utilizando el modelo cliente-servidor implementado con cola de mensajes, hilos y números aleatorios generados con la distribución Poisson.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">message_q.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="message__q_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;sys/msg.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defines_8h.html">defines.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="message__q_8h.html#acc783b211f3668521b54f0223062e4df">   21</a></span>&#160;key_t <a class="code" href="message__q_8h.html#acc783b211f3668521b54f0223062e4df">get_key</a>(<span class="keywordtype">char</span> *f, <span class="keywordtype">int</span> n)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    key_t key = ftok(f, n);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span>(key &lt; 0)</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        handle_error(<span class="stringliteral">&quot;ftok&quot;</span>);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> key;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="message__q_8h.html#a45d42c7659914d57da90d6865637253c">   41</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="message__q_8h.html#a45d42c7659914d57da90d6865637253c">create_message_q</a>(key_t key, <span class="keywordtype">int</span> flg)</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> msgid;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(flg)</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        msgid = msgget(key, 0777 | IPC_CREAT);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        msgid = msgget(key, 0777);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span>(msgid &lt; 0)</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        handle_error(<span class="stringliteral">&quot;msgget&quot;</span>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> msgid;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="message__q_8h.html#a20ef5f27faa1ddf14cc1c0c56bf30c3e">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="message__q_8h.html#a20ef5f27faa1ddf14cc1c0c56bf30c3e">destroy_message_q</a>(<span class="keywordtype">int</span> msgid)</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span>(msgctl(msgid, IPC_RMID, 0) &lt; 0)</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        handle_error(<span class="stringliteral">&quot;msgctl&quot;</span>);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div><div class="ttc" id="message__q_8h_html_a20ef5f27faa1ddf14cc1c0c56bf30c3e"><div class="ttname"><a href="message__q_8h.html#a20ef5f27faa1ddf14cc1c0c56bf30c3e">destroy_message_q</a></div><div class="ttdeci">void destroy_message_q(int msgid)</div><div class="ttdoc">Elimina la cola de mensajes. </div><div class="ttdef"><b>Definition:</b> message_q.h:67</div></div>
+<div class="ttc" id="defines_8h_html"><div class="ttname"><a href="defines_8h.html">defines.h</a></div><div class="ttdoc">Definición de constantes, manejo de errores y estructuras para colas de mensajes. ...</div></div>
+<div class="ttc" id="message__q_8h_html_a45d42c7659914d57da90d6865637253c"><div class="ttname"><a href="message__q_8h.html#a45d42c7659914d57da90d6865637253c">create_message_q</a></div><div class="ttdeci">int create_message_q(key_t key, int flg)</div><div class="ttdoc">Crea una cola de mensaje (si no existe). </div><div class="ttdef"><b>Definition:</b> message_q.h:41</div></div>
+<div class="ttc" id="message__q_8h_html_acc783b211f3668521b54f0223062e4df"><div class="ttname"><a href="message__q_8h.html#acc783b211f3668521b54f0223062e4df">get_key</a></div><div class="ttdeci">key_t get_key(char *f, int n)</div><div class="ttdoc">Usa la función &amp;#39;ftok()&amp;#39; para obtener una llave válida. </div><div class="ttdef"><b>Definition:</b> message_q.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
