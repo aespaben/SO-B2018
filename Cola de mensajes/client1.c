@@ -141,6 +141,7 @@ int main(int argc, char* argv[])
 
 	} while(1);
 
+	pthread_cancel(show_cars_thread);
 
 	 /* Liberando la memoria asignada a 'ranges'. */
 	for(int i = 0; i < ranges_row_size; i++)
@@ -169,6 +170,8 @@ void usage(char* arg)
 void* show_cars(void* arg)
 {
 	int* total_cars = (int*) arg;
+
+	pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
 
 	while(1)
 	{	

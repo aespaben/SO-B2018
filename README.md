@@ -14,6 +14,7 @@ La manera de ejecutar cada programa cliente es:
 
 Donde &lt;lambda&gt; es un número entero mayor que cero que representa la tasa promedio de llegadas de autos según la distribución Poisson.
 
+Para terminar la ejecución, desde el servidor se presiona **Ctrl+C**. Esto activa la señal correspondiente y elimina las colas de mensaje.
 ### Autores
 - Angel J. España B.
 - Adriana P. Daboin M.
