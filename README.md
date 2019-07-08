@@ -8,6 +8,12 @@ Todos los archivos son compilados con make.
 En una terminal, se ejecuta el programa 'server.out'.
 En otras 4 terminales, se debe ejecutar un programa 'client\*.out', donde (\*) indica el número correspondiente al programa.
 
+La manera de ejecutar cada programa cliente es:
+
+./client\*.out &lt;lambda&gt;
+
+Donde &lt;lambda&gt; es un número entero mayor que cero que representa la tasa promedio de llegadas de autos según la distribución Poisson.
+
 ### Autores
 - Angel J. España B.
 - Adriana P. Daboin M.
