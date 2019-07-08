@@ -246,6 +246,8 @@ void exit_signal(int signum)
 	destroy_message_q(msgid[1]);
 	destroy_message_q(msgid[2]);
 	destroy_message_q(msgid[3]);
+
+	exit(0);
 }
 
 void* show_cars(void* arg)

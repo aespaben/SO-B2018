@@ -125,7 +125,7 @@ int main(int argc, char* argv[])
 				sleep(rand() % 4 + 1);
 				if(msgsnd(msgid, (void*) &msg, msgsize, 0) < 0)
 				{
-					handle_error("msgsnd");
+					break;
 				}
 
 				++total_cars[0];
@@ -136,7 +136,7 @@ int main(int argc, char* argv[])
 
 		if(msgsnd(msgid, (void*) &msg, msgsize, 0) < 0)
 		{
-			handle_error("msgsnd");
+			break;
 		}
 
 	} while(1);
@@ -202,7 +202,7 @@ void* rcv_cars(void* arg)
 	{	
 		if(msgrcv(msgid, (void*) &msg, msgsize, mtype_rcv, 0) < 0)
 		{
-			handle_error("msgrcv");
+			break;
 		}
 
 		if(msg.car)
