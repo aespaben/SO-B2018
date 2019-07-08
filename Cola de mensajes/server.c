@@ -4,8 +4,8 @@
  * @brief Programa servidor. Se encarga de sincronizar y aceptar las peticiones de acceso de los 
  * procesos al área compartida.
  * 
- * @author Angel España.
- * @author Adriana Daboin.
+ * @author Angel J. España B.
+ * @author Adriana P. Daboin M.
  */
 
 #include <stdio.h>
