@@ -1,2 +1,2 @@
 # SO-B2018
-Proyectos de Sistemas Operativos.
+Repositorio de proyectos de Sistemas Operativos.
