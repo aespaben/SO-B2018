@@ -6,7 +6,7 @@ Cada vía genera un número aleatorio de autos que son recibidos por la vía opu
 ## Cola de mensajes
 Todos los archivos son compilados con make.
 En una terminal, se ejecuta el programa 'server.out'.
-En otras 4 terminales, se debe ejecutar un programa 'client\*.out', donde (\*) indica el número correspondiente al programa.
+En otras 4 terminales, se debe ejecutar un programa 'client\*.out', donde (\*) indica el número correspondiente al programa (1, 2, 3 o 4).
 
 La manera de ejecutar cada programa cliente es:
 
