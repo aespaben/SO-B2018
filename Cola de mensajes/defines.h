@@ -29,14 +29,3 @@ typedef struct
 	long mtype;
 	unsigned short car;
 } msgbuf;
-
-/**
- * @struct msgsig
- * 
- * @brief Indica la vía que tiene permiso para continuar.
- */
-typedef struct 
-{
-	long mtype;
-	unsigned short proceed;
-} msgsig;
