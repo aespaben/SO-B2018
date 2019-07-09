@@ -29,5 +29,6 @@ typedef struct
 	unsigned short cars_3;
 	unsigned short cars_4;
 
+	unsigned short stop;
 	unsigned short process_counter;
 } membuf;

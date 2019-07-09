@@ -1,0 +1,121 @@
+.TH "semaphore.h" 3 "Lunes, 8 de Julio de 2019" "Proyecto de Sistemas Operativos - Semáforos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+semaphore.h \- Funciones para la creación y destrucción de semáforos\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sys/sem\&.h>\fP
+.br
+\fC#include 'error_handler\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "int \fBcreate_sem\fP (key_t key, int flg)"
+.br
+.RI "\fICrea un semáforo (si no existe)\&. \fP"
+.ti -1c
+.RI "void \fBset_sem\fP (int semid, int value)"
+.br
+.RI "\fIConfigura el valor inicial del semáforo\&. \fP"
+.ti -1c
+.RI "void \fBsem_red\fP (int semid)"
+.br
+.RI "\fIColoca el semáforo en rojo\&. \fP"
+.ti -1c
+.RI "void \fBsem_green\fP (int semid)"
+.br
+.RI "\fIColoca el semáforo en rojo\&. \fP"
+.ti -1c
+.RI "void \fBdestroy_sem\fP (int semid)"
+.br
+.RI "\fIElimina el semáforo\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Funciones para la creación y destrucción de semáforos\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "int create_sem (key_t key, int flg)"
+
+.PP
+Crea un semáforo (si no existe)\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIkey\fP Llave obtenida con '\fBget_key()\fP'\&. 
+.br
+\fIflg\fP Bandera\&. 0 para obtener solo el id del semáforo, cualquier otro valor entero para crear el semáforo\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+semid id del semáforo\&. 
+.RE
+.PP
+
+.SS "void destroy_sem (int semid)"
+
+.PP
+Elimina el semáforo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIsemid\fP id del semáforo\&. 
+.RE
+.PP
+
+.SS "void sem_green (int semid)"
+
+.PP
+Coloca el semáforo en rojo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIsemid\fP id del semáforo\&. 
+.RE
+.PP
+
+.SS "void sem_red (int semid)"
+
+.PP
+Coloca el semáforo en rojo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIsemid\fP id del semáforo\&. 
+.RE
+.PP
+
+.SS "void set_sem (int semid, int value)"
+
+.PP
+Configura el valor inicial del semáforo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIsemid\fP id del semáforo\&. 
+.br
+\fIvalue\fP Valor de inicialización del semáforo\&. 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos - Semáforos del código fuente\&.

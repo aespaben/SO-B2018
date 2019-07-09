@@ -1,0 +1,77 @@
+.TH "server.c" 3 "Lunes, 8 de Julio de 2019" "Proyecto de Sistemas Operativos - Semáforos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+server.c \- Programa servidor\&. Se encarga de inicializar la memoria compartida y el semáforo\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <signal\&.h>\fP
+.br
+\fC#include 'ftok\&.h'\fP
+.br
+\fC#include 'shared_mem\&.h'\fP
+.br
+\fC#include 'semaphore\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBexit_signal\fP (int signum)"
+.br
+.RI "\fISeñal de salida\&. Elimina la memoria compartida y el semáforo, y cierra el programa\&. \fP"
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.RI "\fIFunción principal\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Programa servidor\&. Se encarga de inicializar la memoria compartida y el semáforo\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "void exit_signal (int signum)"
+
+.PP
+Señal de salida\&. Elimina la memoria compartida y el semáforo, y cierra el programa\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIsignum\fP Número de señal\&. 
+.RE
+.PP
+
+.SS "int main ()"
+
+.PP
+Función principal\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+0 al salir exitosamente, -1 en caso de error\&. 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos - Semáforos del código fuente\&.

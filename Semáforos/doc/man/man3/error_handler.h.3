@@ -1,0 +1,47 @@
+.TH "error_handler.h" 3 "Lunes, 8 de Julio de 2019" "Proyecto de Sistemas Operativos - Semáforos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+error_handler.h \- Manejador de errores (preprocesador)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "'defines'"
+
+.in +1c
+.ti -1c
+.RI "#define \fBhandle_error\fP(msg)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Manejador de errores (preprocesador)\&. 
+
+
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImsg\fP Sujeto del error\&.
+.RE
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de los 'defines'"
+.PP 
+.SS "#define handle_error(msg)"
+\fBValor:\fP
+.PP
+.nf
+perror(msg); \
+        exit(EXIT_FAILURE);
+.fi
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos - Semáforos del código fuente\&.

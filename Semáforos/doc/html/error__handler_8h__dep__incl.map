@@ -1,0 +1,10 @@
+<map id="error_handler.h" name="error_handler.h">
+<area shape="rect" id="node2" href="$ftok_8h.html" title="Contiene las especificaciones para generar una llave. " alt="" coords="97,80,152,107"/>
+<area shape="rect" id="node8" href="$shared__mem_8h.html" title="Funciones para la creación y destrucción de memoria compartida. " alt="" coords="176,80,284,107"/>
+<area shape="rect" id="node9" href="$semaphore_8h.html" title="Funciones para la creación y destrucción de semáforos. " alt="" coords="308,80,405,107"/>
+<area shape="rect" id="node3" href="$client1_8c.html" title="Genera autos de forma aleatoria según la distribución lambda. Se comunica con otros clientes..." alt="" coords="384,155,455,181"/>
+<area shape="rect" id="node4" href="$client2_8c.html" title="Genera autos de forma aleatoria según la distribución lambda. Se comunica con otros clientes..." alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node5" href="$client3_8c.html" title="Genera autos de forma aleatoria según la distribución lambda. Se comunica con otros clientes..." alt="" coords="100,155,171,181"/>
+<area shape="rect" id="node6" href="$client4_8c.html" title="Genera autos de forma aleatoria según la distribución lambda. Se comunica con otros clientes..." alt="" coords="195,155,265,181"/>
+<area shape="rect" id="node7" href="$server_8c.html" title="Programa servidor. Se encarga de inicializar la memoria compartida y el semáforo. ..." alt="" coords="290,155,359,181"/>
+</map>

@@ -8,27 +8,10 @@
  */
 
 #include <sys/sem.h>
-#include "defines.h"
+#include "error_handler.h"
 
-/**
- * @brief Usa la función 'ftok()' para obtener una llave válida.
- *
- * @param f Cadena de caracteres con la ruta del archivo.
- * @param n Número entero para generar la llave.
- *
- * @return La llave creada.
- */
-key_t get_key(char *f, int n)
-{
-	key_t key = ftok(f, n);
-
-	if(key < 0)
-	{
-		handle_error("ftok");
-	}
-
-	return key;
-}
+static struct sembuf p = { 0, -1, SEM_UNDO };
+static struct sembuf v = { 0, 1, SEM_UNDO };
 
 /**
  * @brief Crea un semáforo (si no existe).
@@ -57,6 +40,46 @@ int create_sem(key_t key, int flg)
 	}
 
 	return semid;
+}
+
+/**
+ * @brief Configura el valor inicial del semáforo.
+ * 
+ * @param semid id del semáforo.
+ * @param value Valor de inicialización del semáforo.
+ */
+void set_sem(int semid, int value)
+{
+	if(semctl(semid, 0, SETVAL, value) < 0)
+	{
+		handle_error("semctl");
+	}
+}
+
+/**
+ * @brief Coloca el semáforo en rojo.
+ *
+ * @param semid id del semáforo.
+ */
+void sem_red(int semid)
+{
+	if(semop(semid, &p, 1) < 0)
+	{
+		handle_error("sem_red");
+	}
+}
+
+/**
+ * @brief Coloca el semáforo en rojo.
+ *
+ * @param semid id del semáforo.
+ */
+void sem_green(int semid)
+{
+	if(semop(semid, &v, 1) < 0)
+	{
+		handle_error("sem_green");
+	}
 }
 
 /**

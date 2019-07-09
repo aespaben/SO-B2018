@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Proyecto de Sistemas Operativos - Semáforos: Referencia del Archivo client2.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Proyecto de Sistemas Operativos - Semáforos
+   </div>
+   <div id="projectbrief">Implementación del problema del cruce de avenidas utilizando semáforos y memoria compartida.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo client2.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Genera autos de forma aleatoria según la distribución lambda. Se comunica con otros clientes, les envía autos y a su vez los recibe.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ftok_8h_source.html">ftok.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="shared__mem_8h_source.html">shared_mem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="semaphore_8h_source.html">semaphore.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rand__poisson_8h_source.html">rand_poisson.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para client2.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="client2_8c__incl.png" border="0" usemap="#client2_8c" alt=""/></div>
+<map name="client2_8c" id="client2_8c">
+<area shape="rect" id="node7" href="ftok_8h.html" title="Contiene las especificaciones para generar una llave. " alt="" coords="553,80,607,107"/>
+<area shape="rect" id="node11" href="shared__mem_8h.html" title="Funciones para la creación y destrucción de memoria compartida. " alt="" coords="631,80,739,107"/>
+<area shape="rect" id="node14" href="semaphore_8h.html" title="Funciones para la creación y destrucción de semáforos. " alt="" coords="763,80,861,107"/>
+<area shape="rect" id="node16" href="rand__poisson_8h.html" title="Funciones especializadas para el cálculo de la probabilidad acumulada, intervalos de probabilidad y g..." alt="" coords="142,80,253,107"/>
+<area shape="rect" id="node10" href="error__handler_8h.html" title="Manejador de errores (preprocesador). " alt="" coords="578,155,686,181"/>
+<area shape="rect" id="node13" href="defines_8h.html" title="Definición de constantes. " alt="" coords="817,155,892,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a92d1aa11ae3ffb29e174867ea1d45fa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client2_8c.html#a92d1aa11ae3ffb29e174867ea1d45fa9">usage</a> (char *arg)</td></tr>
+<tr class="memdesc:a92d1aa11ae3ffb29e174867ea1d45fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el uso del programa.  <a href="#a92d1aa11ae3ffb29e174867ea1d45fa9">Más...</a><br /></td></tr>
+<tr class="separator:a92d1aa11ae3ffb29e174867ea1d45fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a42d2fc40aee51a23ead380261eb36"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client2_8c.html#ad8a42d2fc40aee51a23ead380261eb36">show_cars</a> (void *arg)</td></tr>
+<tr class="memdesc:ad8a42d2fc40aee51a23ead380261eb36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra los autos que salen y entran de la vía.  <a href="#ad8a42d2fc40aee51a23ead380261eb36">Más...</a><br /></td></tr>
+<tr class="separator:ad8a42d2fc40aee51a23ead380261eb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client2_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Programa principal.  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Más...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Genera autos de forma aleatoria según la distribución lambda. Se comunica con otros clientes, les envía autos y a su vez los recibe. </p>
+<dl class="section author"><dt>Autor</dt><dd>Angel J. España B. </dd>
+<dd>
+Adriana P. Daboin M. </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Programa principal. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Cantidad de argumentos. </td></tr>
+    <tr><td class="paramname">argv</td><td>Vector de argumentos.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si la ejecución finalizó exitosamente, -1 en caso de error. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8a42d2fc40aee51a23ead380261eb36"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* show_cars </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra los autos que salen y entran de la vía. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>Arreglo con la cantidad de autos que entran y salen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>NULL. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a92d1aa11ae3ffb29e174867ea1d45fa9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void usage </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el uso del programa. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>Nombre del programa. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

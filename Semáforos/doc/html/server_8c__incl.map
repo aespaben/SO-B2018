@@ -1,0 +1,7 @@
+<map id="server.c" name="server.c">
+<area shape="rect" id="node6" href="$ftok_8h.html" title="Contiene las especificaciones para generar una llave. " alt="" coords="363,80,418,107"/>
+<area shape="rect" id="node10" href="$shared__mem_8h.html" title="Funciones para la creación y destrucción de memoria compartida. " alt="" coords="442,80,550,107"/>
+<area shape="rect" id="node13" href="$semaphore_8h.html" title="Funciones para la creación y destrucción de semáforos. " alt="" coords="574,80,671,107"/>
+<area shape="rect" id="node9" href="$error__handler_8h.html" title="Manejador de errores (preprocesador). " alt="" coords="389,155,497,181"/>
+<area shape="rect" id="node12" href="$defines_8h.html" title="Definición de constantes. " alt="" coords="628,155,703,181"/>
+</map>

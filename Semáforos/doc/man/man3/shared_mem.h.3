@@ -1,0 +1,84 @@
+.TH "shared_mem.h" 3 "Lunes, 8 de Julio de 2019" "Proyecto de Sistemas Operativos - Semáforos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+shared_mem.h \- Funciones para la creación y destrucción de memoria compartida\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sys/shm\&.h>\fP
+.br
+\fC#include 'error_handler\&.h'\fP
+.br
+\fC#include 'defines\&.h'\fP
+.br
+
+.SS "Clases"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmembuf\fP"
+.br
+.RI "\fIContiene información del número de autos que pasan por una vía, además de contar la cantidad de procesos activos\&. \fP"
+.in -1c
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "int \fBcreate_mem\fP (key_t key, int flg)"
+.br
+.RI "\fICrea la memoria compartida (si no existe)\&. \fP"
+.ti -1c
+.RI "void \fBdestroy_mem\fP (int shmid)"
+.br
+.RI "\fIElimina la memoria compartida\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Funciones para la creación y destrucción de memoria compartida\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "int create_mem (key_t key, int flg)"
+
+.PP
+Crea la memoria compartida (si no existe)\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIkey\fP Llave obtenida con '\fBget_key()\fP'\&. 
+.br
+\fIflg\fP Bandera\&. 0 para obtener solo el id de la memoria compartida, cualquier otro valor entero para crearla\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+shmid id de la memoria compartida\&. 
+.RE
+.PP
+
+.SS "void destroy_mem (int shmid)"
+
+.PP
+Elimina la memoria compartida\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIshmid\fP id de la memoria compartida\&. 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos - Semáforos del código fuente\&.

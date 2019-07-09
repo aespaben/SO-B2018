@@ -1,0 +1,8 @@
+<map id="client3.c" name="client3.c">
+<area shape="rect" id="node7" href="$ftok_8h.html" title="Contiene las especificaciones para generar una llave. " alt="" coords="553,80,607,107"/>
+<area shape="rect" id="node11" href="$shared__mem_8h.html" title="Funciones para la creación y destrucción de memoria compartida. " alt="" coords="631,80,739,107"/>
+<area shape="rect" id="node14" href="$semaphore_8h.html" title="Funciones para la creación y destrucción de semáforos. " alt="" coords="763,80,861,107"/>
+<area shape="rect" id="node16" href="$rand__poisson_8h.html" title="Funciones especializadas para el cálculo de la probabilidad acumulada, intervalos de probabilidad y g..." alt="" coords="142,80,253,107"/>
+<area shape="rect" id="node10" href="$error__handler_8h.html" title="Manejador de errores (preprocesador). " alt="" coords="578,155,686,181"/>
+<area shape="rect" id="node13" href="$defines_8h.html" title="Definición de constantes. " alt="" coords="817,155,892,181"/>
+</map>

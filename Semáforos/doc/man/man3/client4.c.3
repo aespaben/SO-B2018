@@ -1,0 +1,108 @@
+.TH "client4.c" 3 "Lunes, 8 de Julio de 2019" "Proyecto de Sistemas Operativos - Semáforos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+client4.c \- Genera autos de forma aleatoria según la distribución lambda\&. Se comunica con otros clientes, les envía autos y a su vez los recibe\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <pthread\&.h>\fP
+.br
+\fC#include 'ftok\&.h'\fP
+.br
+\fC#include 'shared_mem\&.h'\fP
+.br
+\fC#include 'semaphore\&.h'\fP
+.br
+\fC#include 'rand_poisson\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "void \fBusage\fP (char *arg)"
+.br
+.RI "\fIMuestra el uso del programa\&. \fP"
+.ti -1c
+.RI "void * \fBshow_cars\fP (void *arg)"
+.br
+.RI "\fIMuestra los autos que salen y entran de la vía\&. \fP"
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.RI "\fIPrograma principal\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Genera autos de forma aleatoria según la distribución lambda\&. Se comunica con otros clientes, les envía autos y a su vez los recibe\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Programa principal\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIargc\fP Cantidad de argumentos\&. 
+.br
+\fIargv\fP Vector de argumentos\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+0 si la ejecución finalizó exitosamente, -1 en caso de error\&. 
+.RE
+.PP
+
+.SS "void* show_cars (void * arg)"
+
+.PP
+Muestra los autos que salen y entran de la vía\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIarg\fP Arreglo con la cantidad de autos que entran y salen\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+NULL\&. 
+.RE
+.PP
+
+.SS "void usage (char * arg)"
+
+.PP
+Muestra el uso del programa\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIarg\fP Nombre del programa\&. 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos - Semáforos del código fuente\&.

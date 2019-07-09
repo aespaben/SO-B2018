@@ -1,0 +1,61 @@
+.TH "ftok.h" 3 "Lunes, 8 de Julio de 2019" "Proyecto de Sistemas Operativos - Semáforos" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ftok.h \- Contiene las especificaciones para generar una llave\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/ipc\&.h>\fP
+.br
+\fC#include 'error_handler\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "key_t \fBget_key\fP (char *f, int n)"
+.br
+.RI "\fIUsa la función 'ftok()' para obtener una llave válida\&. \fP"
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Contiene las especificaciones para generar una llave\&. 
+
+
+.PP
+\fBAutor:\fP
+.RS 4
+Angel J\&. España B\&. 
+.PP
+Adriana P\&. Daboin M\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones"
+.PP 
+.SS "key_t get_key (char * f, int n)"
+
+.PP
+Usa la función 'ftok()' para obtener una llave válida\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIf\fP Cadena de caracteres con la ruta del archivo\&. 
+.br
+\fIn\fP Número entero para generar la llave\&.
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+La llave creada\&. 
+.RE
+.PP
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Proyecto de Sistemas Operativos - Semáforos del código fuente\&.
