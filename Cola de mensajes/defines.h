@@ -1,7 +1,7 @@
 /**
  * @file defines.h
  * 
- * @brief Definición de constantes, manejo de errores y estructuras para memoria compartida.
+ * @brief Definición de constantes, manejo de errores y estructuras para cola de mensajes.
  * 
  * @author Angel J. España B.
  * @author Adriana P. Daboin M.
@@ -9,8 +9,10 @@
  */
 
 #define SHARED_FILE "/bin/ls"
-#define SHARED_NUM 111
-#define PROCESS_MAX 4
+#define SHARED_NUM_1 34
+#define SHARED_NUM_2 35
+#define SHARED_NUM_3 36
+#define SHARED_NUM_4 37
 
 #define handle_error(msg) \
 		perror(msg); \
@@ -20,15 +22,10 @@
 /**
  * @struct membuf
  * 
- * @brief Contiene información del número de autos que pasan por una vía, además de contar la cantidad de procesos activos.
+ * @brief 
  */
 typedef struct 
 {
-	unsigned short cars_1;
-	unsigned short cars_2;
-	unsigned short cars_3;
-	unsigned short cars_4;
-
-	unsigned short stop;
-	unsigned short process_counter;
-} membuf;
+	long mtype;
+	int car;
+} msgbuf;
