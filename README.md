@@ -26,7 +26,3 @@ La manera de ejecutar cada programa cliente es:
 ./client\*.out &lt;lambda&gt;
 
 Donde &lt;lambda&gt; es un número entero mayor que cero que representa la tasa promedio de llegadas de autos según la distribución Poisson.
-
-### Autores
-- Angel J. España B.
-- Adriana P. Daboin M.
